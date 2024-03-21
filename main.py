@@ -1,6 +1,8 @@
 """Программа для генерации заклинаний-палиндромов."""
 # Standard import
 import time
+import tkinter
+from tkinter import filedialog
 # 3d-party import
 import try_to_load as ttl
 import is_palindrome as ip
@@ -11,15 +13,7 @@ import magic_finder as mf
 def main():
     """Основное тело программы."""
     # Выбор пользователем словаря для поиска заклинаний
-    user_choice = input("Выберете словарь для поиска заклинаний\n1. words.csv\n2. russian.txt\n")
-    file_name: str = ""
-    match user_choice:
-        case '1':
-            file_name = "words.csv"
-        case '2':
-            file_name = "russian.txt"
-        case _:
-            file_name = user_choice
+    file_name: str = filedialog.askopenfilename(title="Выберите словарь")
     # Время начала выполнения программы
     st_time = time.time()
     # Загрузка словаря
