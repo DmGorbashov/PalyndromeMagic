@@ -11,7 +11,7 @@ import magic_finder as mf
 def main():
     """Основное тело программы."""
     # Выбор пользователем словаря для поиска заклинаний
-    user_choice = input("Выберете словарь для поиска заклинаний\n1. words.csv\n2.russian.txt")
+    user_choice = input("Выберете словарь для поиска заклинаний\n1. words.csv\n2. russian.txt\n")
     file_name: str = ""
     match user_choice:
         case '1':
